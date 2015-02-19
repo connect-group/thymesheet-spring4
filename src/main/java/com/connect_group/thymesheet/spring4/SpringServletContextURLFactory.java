@@ -17,7 +17,7 @@
  *
  * =============================================================================
  */
-package com.connect_group.thymesheet.spring3;
+package com.connect_group.thymesheet.spring4;
 
 import java.net.MalformedURLException;
 import java.net.URL;

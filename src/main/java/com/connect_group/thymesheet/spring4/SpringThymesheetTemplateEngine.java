@@ -17,7 +17,7 @@
  *
  * =============================================================================
  */
-package com.connect_group.thymesheet.spring3;
+package com.connect_group.thymesheet.spring4;
 
 import com.connect_group.thymesheet.templatemode.IThymesheetTemplateModeHandler;
 import com.connect_group.thymesheet.templatemode.ThymesheetStandardTemplateModeHandlers;
