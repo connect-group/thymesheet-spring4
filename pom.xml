@@ -10,7 +10,7 @@
 
 	<groupId>com.connect-group</groupId>
 	<artifactId>thymesheet-spring4</artifactId>
-	<version>2.1.2</version>
+	<version>2.2.0</version>
 	<packaging>jar</packaging>
 
 	<name>thymesheet-spring4</name>
@@ -51,8 +51,8 @@
 			<url>http://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 		<repository>
-			<id>sonatype-nexus-snapshots</id>
-			<name>Sonatype Nexus Snapshots</name>
+			<id>sonatype-nexus-releases</id>
+			<name>Sonatype Nexus Releases</name>
 			<url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 		</repository>
 	</distributionManagement>
@@ -60,6 +60,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<springframework.version>4.1.0.RELEASE</springframework.version>
+    <nexus-staging-plugin.version>1.6.4</nexus-staging-plugin.version>
+    <nexus-staging-plugin.nexusUrl>https://oss.sonatype.org/</nexus-staging-plugin.nexusUrl>
 	</properties>
 
 	<dependencies>
@@ -73,13 +75,13 @@
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf-spring4</artifactId>
-			<version>2.1.4.RELEASE</version>
+			<version>2.1.6.RELEASE</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.connect-group</groupId>
 			<artifactId>thymesheet</artifactId>
-			<version>2.1.2</version>
+			<version>2.2.0</version>
 		</dependency>
 
 		<dependency>
@@ -106,7 +108,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.4</version>
+                <version>${nexus-staging-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <nexusUrl>https://oss.sonatype.org/</nexusUrl>
