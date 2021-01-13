@@ -59,7 +59,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<springframework.version>4.1.0.RELEASE</springframework.version>
+		<springframework.version>4.3.30.RELEASE</springframework.version>
     <nexus-staging-plugin.version>1.6.4</nexus-staging-plugin.version>
     <nexus-staging-plugin.nexusUrl>https://oss.sonatype.org/</nexus-staging-plugin.nexusUrl>
 	</properties>
@@ -103,7 +103,17 @@
 	</dependencies>
 
     <build>
-        <plugins>
+       <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
             <!-- mvn clean deploy -P sonatype-oss-release -->
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
